@@ -27,7 +27,7 @@ export default function PaginationRounded() {
       <Pagination
         onChange={handleClick}
         count={1000}
-        sx={{ color: 'text.primary' }}
+        sx={{ color: 'text.primary', marginBottom: '6rem' }}
         shape="rounded"
         page={pagenumber}
         hideNextButton={true}

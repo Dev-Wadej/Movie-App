@@ -52,6 +52,7 @@ const Moviecontainer = styled.section`
     margin-bottom: 0.5rem;
     text-align: center;
     font-size: 90%;
+    width: 12rem;
   }
   span {
     display: flex;
@@ -72,6 +73,10 @@ const MovieImage = styled.div`
   overflow: hidden;
   margin-bottom: 0.3rem;
   padding: 0.3rem;
+  @media only screen and (max-width: 900px) {
+    width: 12rem;
+    height: 18rem;
+  }
   img {
     border-radius: 0.8rem;
     width: 100%;

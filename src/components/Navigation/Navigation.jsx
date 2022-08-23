@@ -51,6 +51,7 @@ const NavigationContainer = styled.nav`
   font-family: 'DynaPuff', cursive;
   background-color: #39455a;
   color: #fff;
+  text-align: center;
   display: grid;
   z-index: 3;
   place-items: center;
@@ -63,6 +64,12 @@ const NavigationContainer = styled.nav`
   left: 0;
   right: 0;
   box-shadow: 0 1px 5px #000;
+  @media only screen and (max-width: 900px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 const BottomNavigation = styled.div`
   background-color: #2d313a;
@@ -73,6 +80,9 @@ const BottomNavigation = styled.div`
   left: 0;
   svg {
     font-size: 2rem;
+    @media only screen and (max-width: 900px) {
+      font-size: 1.5rem;
+    }
   }
   div {
     cursor: pointer;
@@ -84,6 +94,9 @@ const BottomNavigation = styled.div`
       display: inline-block;
       font-size: 90%;
       margin-top: 0.5rem;
+      @media only screen and (max-width: 900px) {
+        font-size: 60%;
+      }
     }
   }
   section {
@@ -92,5 +105,11 @@ const BottomNavigation = styled.div`
     display: flex;
     justify-content: center;
     gap: 9rem;
+    @media only screen and (max-width: 900px) {
+      gap: 5rem;
+    }
+    @media only screen and (max-width: 600px) {
+      gap: 2rem;
+    }
   }
 `;

@@ -8,6 +8,12 @@ export const SectionTitleContainer = styled.section `
   color: #fff;
   font-size: 3rem;
   margin-top: 2.5rem;
+  @media only screen and (max-width: 900px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 export const MovieGridContainer = styled.div `
   z-index: 0;

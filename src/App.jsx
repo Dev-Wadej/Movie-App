@@ -10,7 +10,13 @@ import Loader from './components/Loader/Loader';
 function App() {
   return (
     <PaginateProvider>
-      <Suspense fallback={<Loader />}>
+      <Suspense
+        fallback={
+          <div style={{ display: 'grid', placeItems: 'center' }}>
+            <Loader />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Navigation />}>
             {totalRoutes.map((route, idx) => (
