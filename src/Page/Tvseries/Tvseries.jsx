@@ -80,6 +80,9 @@ const Tvseries = () => {
               id={item.id}
               label={item.name}
               onDelete={() => handleDelete(item)}
+              sx={{
+                fontSize: '.7rem',
+              }}
             />
           </Stack>
         ))}
@@ -90,9 +93,11 @@ const Tvseries = () => {
               id={genre.id}
               label={genre.name}
               onClick={(e) => handleAdd(e, genre)}
+              size="small"
               sx={{
                 backgroundColor: '#fff',
                 color: '#000',
+                fontSize: '.7rem',
               }}
             ></Chip>
           </Stack>

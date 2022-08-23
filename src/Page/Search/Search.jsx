@@ -63,14 +63,14 @@ const Search = () => {
             label="Search"
             variant="filled"
             sx={{
-              width: '80vw',
+              width: { sm: '80vw', xs: '60vw' },
               color: 'text.primary',
               borderBottom: '1px solid rgba(255, 255, 255, 0.5)',
             }}
           />
           <SearchIcon
             onClick={handleClick}
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', marginTop: '0.8rem' }}
           />
         </Box>
       </SearchContainer>
@@ -112,6 +112,9 @@ const TabbedButton = styled.div`
   gap: 4rem;
   display: flex;
   align-items: start;
+  @media only screen and (max-width: 900px) {
+    gap: 2rem;
+  }
 `;
 const Button = styled.button`
   cursor: pointer;
@@ -123,6 +126,9 @@ const Button = styled.button`
   font-size: 1.1rem;
   color: white;
   opacity: 0.8;
+  @media only screen and (max-width: 900px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -133,6 +139,12 @@ const SearchContainer = styled.div`
 
   margin-top: 4rem;
   justify-content: center;
+  @media only screen and (max-width: 900px) {
+    margin-top: 2.5rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
 
   svg {
     font-size: 2.5rem;
@@ -142,5 +154,11 @@ const SearchContainer = styled.div`
     padding: 0.4rem;
     margin-left: 1rem;
     border-radius: 0.3rem;
+    @media only screen and (max-width: 900px) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
   }
 `;

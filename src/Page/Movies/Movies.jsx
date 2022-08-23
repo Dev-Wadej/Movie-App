@@ -74,25 +74,31 @@ const Movies = () => {
     <>
       <SectionTitleContainer>DISCOVER MOVIES</SectionTitleContainer>
       <ChipContainer>
-        {selectedGenre.map((item) => (
+        {selectedGenre?.map((item) => (
           <Stack key={item.id}>
             <Chip
               id={item.id}
               label={item.name}
+              size="small"
               onDelete={() => handleDelete(item)}
+              sx={{
+                fontSize: '.7rem',
+              }}
             />
           </Stack>
         ))}
 
-        {totaliterable.map((genre) => (
+        {totaliterable?.map((genre) => (
           <Stack key={genre.id}>
             <Chip
               id={genre.id}
               label={genre.name}
               onClick={(e) => handleAdd(e, genre)}
+              size="small"
               sx={{
                 backgroundColor: '#fff',
                 color: '#000',
+                fontSize: '.7rem',
               }}
             ></Chip>
           </Stack>
