@@ -36,7 +36,7 @@ export const getMovies = createAsyncThunk(
                 return await res.data;
             } else if (movieType === 'series') {
                 const res = await instance.get(
-                    `/discover/tv?api_key=${api_key}&page=${pagenumber}`
+                    `/discover/tv?api_key=${api_key}&page=${pagenumber}&with_genres=${multiple}`
                 );
                 return await res.data;
             } else if (movieType === 'search') {

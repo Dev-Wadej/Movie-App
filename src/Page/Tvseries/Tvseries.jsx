@@ -51,6 +51,7 @@ const Tvseries = () => {
   }, [pagenumber, dispatch, selectedGenre]);
 
   const { movies, isLoading } = useSelector((state) => state.movies);
+  console.log(movies);
   const { genres } = useSelector((state) => state.movies);
 
   const handleDelete = (selectedItem) => {
@@ -72,7 +73,9 @@ const Tvseries = () => {
     );
   return (
     <>
-      <SectionTitleContainer>DISCOVER MOVIES</SectionTitleContainer>
+      <SectionTitleContainer>
+        DISCOVER TV SERIES
+      </SectionTitleContainer>
       <ChipContainer>
         {selectedGenre.map((item) => (
           <Stack key={item.id}>
