@@ -16,7 +16,10 @@ const LoaderContainer = styled.div`
   width: var(--uib-size);
   height: 100vh;
   width: 100vh;
-
+  @media only screen and (max-width: 900px) {
+    height: 100vh;
+    width: 100vw;
+  }
   &::before,
   &::after {
     content: '';
